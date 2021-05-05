@@ -1,0 +1,11 @@
+.carousal-element{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.carousal-images{
+    width: 100%;
+    height: 100%;
+}

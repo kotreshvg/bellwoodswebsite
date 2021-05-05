@@ -1,0 +1,193 @@
+@media only screen and (min-width:992px){
+.box img{
+    position:absolute;
+    z-index:-1;
+    width:100%;
+    height: 100%;
+    left:0px;
+}
+.box h4{
+    text-align:left;
+    margin-left: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 3.5vw;
+    animation: animate 1s ease-in-out ;
+}
+.box p{ 
+    text-align:left;
+        font-size: 2vw;
+        margin-left: 10%;
+        font-weight: bold;
+        backdrop-filter: blur(5px);
+}
+#tag{
+    margin-left: 0;
+}
+.box2{
+    width: 100%;
+    height: 220px;
+}
+.goal{
+    width:75%;
+    margin:0 0 0 0;  
+    float:left;
+    backdrop-filter: blur(20px);
+}
+.goal p{
+    text-align: left;
+    font-weight: bold;
+    margin: 0 0 0 20%;
+}
+.mantra{
+    width: 25%;
+    float:right;
+}
+.mantra p{
+    text-align: left;
+    font-weight: bold;
+}
+}
+@media only Screen and (min-width: 768px) and (max-width: 991px) {
+    .box img{
+        position: absolute;
+        z-index: -1;
+        max-width: 100%;
+        left: 0;
+        height: 100vh;
+    }
+    .box h4{
+        text-align:left;
+        margin-left: 0;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 3.5vw;
+        animation: animate 1s ease-in-out ;
+    }
+    .box p{
+        text-align:left;
+        font-size: 2vw;
+        margin-left: 10%;
+        font-weight: bold;
+        backdrop-filter: blur(5px);
+    }
+    #tag{
+        margin:0;
+    }
+    .goal{
+        width: 75%;
+        margin: 50px 0 0 0;
+        float: left;
+        backdrop-filter: blur(20px);
+    }
+    .goal h4{
+        margin-left: 0;
+    }
+    .goal p{
+        text-align: left;
+        margin-left: 13%;
+    }
+    .mantra{
+        width: 25%;
+        text-align: center;
+        float:right;
+        margin: 50px 0 0 0;
+    }
+    .mantra p{
+        font-weight: bold;
+    }
+}
+@media screen and (min-width:576px) and (max-width:767px){
+    .box img{
+        position: absolute;
+        z-index: -1;
+        max-width: 100%;
+        left: 0;
+        height: 100vh;
+    }
+    .box h4{
+        text-align:left;
+        margin-left: 0;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 3.5vw; 
+        animation: animate 1s ease-in-out ;
+    }
+    .box p{
+        text-align:left;
+        font-size: 2vw;
+        margin-left: 10%;
+        font-weight: bold;
+        backdrop-filter: blur(5px);
+    }
+    #tag{
+        margin: 0;
+    }
+    .goal{
+        width: 100%;
+        margin: 50px 0 0 0;
+        float: none;
+        backdrop-filter: blur(20px);
+    }
+    .goal p{
+        text-align: left;
+        margin-left: 10%;
+    }
+    .mantra{
+        width: 100%;
+        text-align: left;
+    }
+    .mantra p{
+        font-weight: bold;
+        margin-left: 10%;
+    }
+}
+@media screen and (min-width:320px) and (max-width:575px){
+    .box img{
+        position: absolute;
+        z-index: -1;
+        max-width: 100%;
+        left: 0;
+        height: 100vh;
+    }
+    .box h4{
+        text-align:left;
+        margin-left: 0;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 3.5vw;
+        animation: animate 1s ease-in-out ;
+    }
+    .box p{
+        text-align:left;
+        font-size: 2vw;
+        margin-left: 10%;
+        font-weight: bold;
+        backdrop-filter: blur(5px);
+    }
+    #tag{
+        text-align:left;
+        margin: 0;
+    }
+    .goal{
+        width: 100%;
+        margin: 50px 0 0 0;
+        float: none;
+        backdrop-filter: blur(20px);
+    }
+    .goal h4{
+        margin: 0;
+    }
+    .goal p{
+        text-align: left;
+        margin: 10px 0 0 10%;
+    }
+    .mantra{
+        width: 100%;
+        margin: 20px 0 0 0;
+    }
+    .mantra h4{
+        margin: 0;
+    }
+    .mantra p{
+        font-weight: bold;
+        text-align:left;
+        margin: 0 0 0 10%;
+    }
+}

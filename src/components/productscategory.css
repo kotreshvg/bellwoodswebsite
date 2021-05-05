@@ -1,0 +1,81 @@
+ @media only screen and (min-width:992px){
+    .card-deck{
+        margin: 5px;
+        height: 60vh;
+        overflow-x: scroll;
+    }
+    .card-deck .card{
+        height: 100%;
+        width: 20%;
+        overflow: hidden;
+    }
+    .card-img-top{
+        height: 50%;
+    }
+} 
+@media only Screen and (min-width: 768px) and (max-width: 991px){
+    .card-deck{
+        margin: 5px;
+        height: 40vh;
+        overflow-x: scroll;
+    }
+    .card-deck .card{
+        height: 100%;
+        margin: 0 2px 0 2px;
+        width: 20%;
+        overflow:hidden;
+    }
+    .card-text{
+        display: none;
+    }
+    .card-img-top{
+        height: 80%;
+    }
+}
+@media screen and (min-width:576px) and (max-width:767px){
+    .card-deck{
+        margin: 5px;
+        height: 30vh;
+        overflow-x: scroll;
+    }
+    .card-deck .card{
+        height: 100%;
+        margin: 0 2px 0 1px;
+        width: 20%;
+        overflow:hidden;
+    }
+    .card-text{
+        display: none;
+    }
+    .card-body h5 {
+        margin: 0;
+        font-size: 15px;
+        text-align:center;
+    }
+    .card-img-top{
+        height: 70%;
+    }
+}
+ @media screen and (min-width:320px) and (max-width:575px){
+    .card-deck{
+        margin: 5px;
+    }
+    .card-deck .card{
+        height:auto;
+        margin: 5px auto 0 auto;
+        width: 70%;
+        overflow:hidden;
+
+    }
+    .card-text{
+        display: none;
+    }
+    .card-body h5 {
+        margin: 0;
+        font-size: 15px;
+        text-align:center;
+    }
+    .card-img-top{
+        height: 80%;
+    }
+} 

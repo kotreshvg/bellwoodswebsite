@@ -1,0 +1,103 @@
+@keyframes display {
+  from{
+    transform: translateX(-20px);
+    opacity: 0.5;
+  }
+  to{
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+.container{
+  animation: display 1s ease-in-out ;
+    width: 300px;
+    height: auto;
+    border-radius: 7px;
+    border: 2px solid lightseagreen;
+    background-color:transparent;
+    color:white;
+    position: absolute;
+    left: 50%;
+    top: 40px;
+    z-index: 1;
+    backdrop-filter: blur(5px);
+  }
+  input{
+    height: 30px;
+    width: 90%;
+    border:thin;
+    border-radius: 10px;
+    font-size: small;
+    box-shadow: 0px -2px 10px linen;
+  }
+  .button{
+    width: 90px;
+    height: 40px;
+    color: teal;
+    background-color:white;
+    text-align: center;
+    margin: 10px 10% 0 0 ;
+    border-radius: 4px;
+    cursor: pointer;
+    float:right;
+  }
+  label{
+    font-size: small;
+  }
+  *:focus{
+    outline: none;
+    box-shadow: none;
+    border-color: transparent;
+  }
+  .hide{
+    display: none;
+  }
+  .menu{
+    float:right;
+    cursor:pointer;
+  margin-top: 5px;
+  font-size:large;
+  }
+  .nav-item{
+    color: snow;
+  }
+  .progress{
+    height: 30px;
+    width: auto;
+    background-color:transparent;
+   display: flex;
+  flex-direction: row;
+  justify-content:space-evenly;
+  align-items: flex-end;
+}  
+.progress > div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  border: 3px solid white;
+}
+.progress > :nth-child(1)::after{
+  content: '';
+  width: 80px;
+  height: 2px;
+  position: absolute;
+  left: 110px;
+  background-color:white;
+}
+#complete{
+    color:transparent;
+}
+textarea{
+    border-radius: 10px;
+    height: 70px;
+    font-size: small;
+    width: 90%;
+}
+.callout{
+  background-color: transparent;
+  border: thin;
+  cursor: pointer;
+}
