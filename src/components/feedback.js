@@ -13,10 +13,10 @@ const number=(e)=>{
     mob=e.target.value;
 }
 const submit=()=>{
-    var URI='http://localhost:8000/suggestion';
+    var URI='https://bellwoodsbackend.herokuapp.com/suggestion/';
     alert(URI);
     axios.post(URI,{'suggestion':suggestion, 'mobile':mob})
-    .then(Response=>alert(Response))
+    .then(Response=>alert(Response.data))
     .catch(err=>alert(err));
 }
 
