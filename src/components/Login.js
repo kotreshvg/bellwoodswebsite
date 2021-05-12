@@ -1,7 +1,46 @@
 import React, { useState } from 'react';
 import './login.css';
 
+const axios= require('axios');
+
 function Login() {
+  var [signup, setval]=useState({
+    signup_password:'',
+    signup_username:'',
+    signup_mobile:null,
+    signup_email:'',
+    pin   :null,
+    district:'',
+    taluk:'',
+    city:'',
+    location:''
+  })
+
+  const handlepassword=(e)=>{
+    setval({
+      ...signup,
+      [e.target.name]:e.target.value
+    })
+  }
+
+  const signupnew=()=>{
+    alert(signup.signup_username);
+    var URI="https://bellwoodsbackend.herokuapp.com/users/";
+    axios.post(URI,{
+      'username':signup.signup_username,
+      'mobile':signup.signup_mobile,
+      'password':signup.signup_password,
+      'email':signup.signup_email,
+      'address':{
+        'pin':signup.pin,
+        'district':signup.district,
+        'taluk':signup.taluk,
+        'city':signup.city,
+        'location':signup.location
+      }
+    }).then(Response=>alert(Response.data)).catch(err=>alert(err))
+  }
+  //-------------------------------------------------------------------
 var [visible,setvisible]=useState('hide');
 
 function toggle(){
@@ -69,40 +108,40 @@ function hide() {
 
       <div className={`${hide()} adress-query`}>
       <div><br/>
-          <textarea type="" placeholder='address' className="house-input" name="house-number" />
+          <textarea type="" placeholder='location' className="house-input" onChange={handlepassword} name="location" />
         </div>
         <div><br/>
-            <input type="" placeholder="city / locality" className="city" name="city" />
+            <input type="" placeholder="city / locality" className="city" onChange={handlepassword} name="city" />
         </div>
         <div><br/>
-            <input type="" placeholder="taluk" className="taluk" name="taluk" />
+            <input type="" placeholder="taluk" className="taluk" onChange={handlepassword} name="taluk" />
         </div>
         <div><br/>
-            <input type="" placeholder="district" name="district" />
+            <input type="" placeholder="district" onChange={handlepassword} name="district" />
         </div>
         <div><br/>
-          <input type='number' placeholder='pin' />
+          <input type='number' onChange={handlepassword} placeholder='pin' name='pin' />
         </div>
-        <div className="button">sign up <i className="fa">&#xf1d8;</i></div>
+        <div className="button" onClick={signupnew}>sign up <i className="fa">&#xf1d8;</i></div>
         <div onClick={address} className="button">previous</div>
       </div>
       
       <div className={show()} id="signup">
         <div>
           <label><i className="fa">&#xf2c0;</i></label><br/>
-          <input type="" placeholder='User name' className="signup-input" name="signup-username"></input>
+          <input type="" placeholder='User name' className="signup-input" name="signup_username" onChange={handlepassword}/>
         </div>
         <div>
           <label><i style={{'fontSize':20+'px'}} className="fa">&#xf10b;</i></label><br/>
-            <input type="number" placeholder="mobile number" className="signup-mobile" name="signup-mobile"></input>
+            <input type="number" placeholder="mobile number" className="signup-mobile" name="signup_mobile" onChange={handlepassword}/>
         </div>
         <div>
           <label><i className="fa fa-envelope"></i></label><br/>
-            <input type="email" placeholder="email address" className="signup-email" name="signup-email"></input>
+            <input type="email" placeholder="email address" className="signup-email" name="signup_email" onChange={handlepassword} />
         </div>
         <div>
           <label><i className="fa fa-key"></i></label><br/>
-            <input type="password" placeholder="create new password" className="signup-password" name="signup-password"></input>
+            <input type="password" placeholder="create new password" className="signup-password" name="signup_password" onChange={handlepassword} />
         </div>
         <div>
           <label><i className="fa fa-key"></i></label><br/>
