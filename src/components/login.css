@@ -13,8 +13,8 @@
     width: 300px;
     height: auto;
     border-radius: 7px;
-    border: 2px solid lightseagreen;
-    background-color:transparent;
+    border: 2px solid rgb(144, 144, 243);
+    background-color:rgb(177, 177, 245);
     color:white;
     position: absolute;
     left: 50%;
@@ -99,5 +99,11 @@ textarea{
 .callout{
   background-color: transparent;
   border: thin;
+  color: white;
   cursor: pointer;
+}
+@media screen and (min-width:320px) and (max-width:630px){
+  .container{
+    left: 0px;
+  }
 }
