@@ -1,0 +1,46 @@
+.selection_tab_wrapper{
+    width: auto;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    align-items: center;
+    background-color:gold;
+}
+.furnitures_button{
+    width: 20%;
+    height: 20%;
+    border-radius: 7px;
+    border: 1px solid ghostwhite;
+    box-shadow: 2px 2px 2px 0 goldenrod, -1px -1px 2px 0 white;
+    text-align: center;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size:larger;
+}
+.interior_button{
+    width: 20%;
+    height: 20%;
+    border-radius: 7px;
+    border: 1px solid ghostwhite;
+    box-shadow: 2px 2px 2px 0 goldenrod, -1px -1px 2px 0 white;
+    text-align: center;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size:larger;
+}
+.tab_element{
+    width: 100px;
+    height: 100px;
+    margin: 1%;
+    border-radius: 7px;
+    background-color: ghostwhite;
+    box-shadow: 2px 2px 2px 0 gainsboro, -1px -1px 2px 0 whitesmoke;
+}
+.tab_list{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.hide{
+    display: none;
+}

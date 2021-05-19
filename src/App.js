@@ -9,6 +9,7 @@ import Requestbuild from "./components/requestbuild";
 import Login from "./components/Login";
 import Interiocarosal from "./components/interio-carosal";
 import logo from './components/red-BELLWOODS.png';
+import Products from './components/products';
 
 function App() {
   return (
@@ -34,7 +35,7 @@ function App() {
 <div className="tab-content" id="myTabContent">
   <div className="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
     <Home_Card/>
-    <Interiocarosal />
+    <Products/>
     <Productcategories/>
     <Infocard/>
     <Footer/>
