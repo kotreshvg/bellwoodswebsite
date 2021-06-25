@@ -1,0 +1,70 @@
+.checkout_wrapper{
+    background-color: #D8FDFF;
+}
+.checkout_headbar{
+    width: 100%;
+    height: 40px;
+    background-color: #3FC5FF;
+}
+.checkout_info > img{
+    height: 30vw;
+    width: 30vw;
+    background-color:#8BEBFF;
+    margin: 2vw 2vw;
+    border-radius: 15px;
+}
+.checkout_info{
+    display: flex;
+    flex-direction: row;
+}
+.details{
+    margin: 2vw 0 0 0;
+}
+.details > h6{
+    margin: 2vw 0;
+}
+.customer_info > input{
+    width:40vw ;
+    border: 1px solid #1F75B7;
+    margin: 2vw 0;
+}
+.address{
+    width: 40vw;
+    height: 10vw;
+}
+.payment_options > ul{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+}
+.payment_options > ul >li{
+    list-style-type: none;
+    height: max-content;
+    cursor: pointer;
+    width: fit-content;
+    padding: 0 1vw;
+    border-radius: 10px;
+    margin: 1vw;
+    text-align: center;
+    border: 2px solid white;
+    color: white;
+    font-family:cursive;
+    box-shadow: 1px 1px 2px 0 #018EDB ;
+    background-image:linear-gradient(to bottom right, #6D2499,#3FC5FF) ;
+}
+.payment_options li > span{
+    font-size: x-small;
+}
+.payment_button{
+    width: 60%;
+    height: max-content;
+    border-radius: 10px;
+    margin: 1vw;
+    text-align: center;
+    line-height: 40px;
+    border: 2px solid white;
+    color: white;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-image: linear-gradient(to right, #FF7F2B,#FFDB2B);
+}

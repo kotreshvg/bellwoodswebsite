@@ -1,6 +1,7 @@
-import React, { PureComponent } from 'react'
+import React, { PureComponent, Suspense } from 'react'
 import './products.css';
-import Itemlist from './items';
+
+const Itemslist = React.lazy(()=>import('./items'));
 
 class selection_tab extends PureComponent {
     constructor(props) {
@@ -20,12 +21,20 @@ class selection_tab extends PureComponent {
         }
     }
     sendprops=(category)=>{
-        if(category==='beds'){
-        this.setState({...this.state, category:'beds'});
+        this.setState({...this.state, category:category},
+        ()=>{console.log('products state updated'+this.state.category);});
     }
-    if(category==='chairs'){
-        this.setState({...this.state, category:'chairs'});
-    }
+    selectionstate=()=>{
+        if(this.state.category===''){
+            return null;
+        }
+        else if(this.state.category!=''){
+            return (
+                <Suspense fallback={<div>Loading...</div>}>
+                <Itemslist category={this.state.category} />
+                </Suspense>
+            );
+        }
     }
 
     render() {
@@ -42,7 +51,7 @@ class selection_tab extends PureComponent {
                     <li className="tab_element"  onClick={()=>this.sendprops('dinner')}>dinner sets</li>
                     <li className="tab_element" onClick={()=>this.sendprops('sofa')}>sofa</li>                    
                 </ul>
-                <Itemlist category={this.state.category} />
+                {this.selectionstate()}                
             </div>
             </div>
         )

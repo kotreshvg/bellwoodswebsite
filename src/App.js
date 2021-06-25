@@ -3,11 +3,9 @@ import './App.css';
 import Home_Card from "./components/home_card";
 import Infocard from "./components/Infocard";
 import Footer from "./components/footer";
-import Productcategories from "./components/productcategories";
 import Profile from './components/profile';
 import Requestbuild from "./components/requestbuild";
 import Login from "./components/Login";
-import Interiocarosal from "./components/interio-carosal";
 import logo from './components/red-BELLWOODS.png';
 import Products from './components/products';
 
@@ -36,14 +34,14 @@ function App() {
   <div className="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
     <Home_Card/>
     <Products/>
-    <Productcategories/>
-    <Infocard/>
     <Footer/>
     
   </div>
   <div className="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
     <Profile/>
     <Requestbuild/>
+    <Infocard/>
+
   </div>
   <div className="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
 </div>
