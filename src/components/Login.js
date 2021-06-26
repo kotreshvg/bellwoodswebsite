@@ -13,7 +13,10 @@ function Login() {
     district:'',
     taluk:'',
     city:'',
-    location:''
+    location:'',
+    signin_username:'',
+    signin_password:''
+
   })
 
   const handlepassword=(e)=>{
@@ -23,9 +26,20 @@ function Login() {
     })
   }
 
+  const login=()=>{
+    axios.post('http://localhost:8000/users/login',{
+      'username' : signup.signin_username,
+      'password' : signup.signin_password
+    }).then((res)=>{
+      window.sessionStorage.setItem('username',res.data.username);
+      window.sessionStorage.setItem('token',res.data.token);
+      alert(res.data.message);
+    })
+  }
+// ------------------------------------new sign up ---------------------------------------
   const signupnew=()=>{
     alert(signup.signup_username);
-    var URI="https://bellwoodsbackend.herokuapp.com/users/";
+    var URI="http://localhost:8000/users/create";
     axios.post(URI,{
       'username':signup.signup_username,
       'mobile':signup.signup_mobile,
@@ -87,13 +101,13 @@ function hide() {
     <div className="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
             <div>
               <label><i className="fa">&#xf2c0;</i></label><br/>
-              <input type="" placeholder="username" className="login-input" name="username" ></input>
+              <input type="" placeholder="username" className="login-input" name="signin_username" onChange={handlepassword}></input>
             </div>
             <div>
               <label><i className="fa fa-key"></i></label><br/>
-              <input type="password" placeholder="password" className="loginpassword" name="password"></input>
+              <input type="password" placeholder="password" className="loginpassword" name="signin_password" onChange={handlepassword}></input>
             </div>
-            <div className="button">sign in <i className="fa">&#xf1d8;</i></div>
+            <div className="button" onClick={login}>sign in <i className="fa">&#xf1d8;</i></div>
     </div>
 
     <div className="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">

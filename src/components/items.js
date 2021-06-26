@@ -128,7 +128,7 @@ class Selecteditem extends PureComponent {
 
     render() {
         var order_details={
-            product_id:this.state.Selecteditem,
+            product_id:this.state.item_id,
             product_name:this.state.item_name,
             material_selected: this.state.material_selected,
             color_selected : this.state.color_selected,

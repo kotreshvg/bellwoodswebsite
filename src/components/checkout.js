@@ -23,6 +23,17 @@ class Checkout extends PureComponent {
     }
     pay=()=>{
         var rzp1;
+        console.log(this.state.product_id);
+        var order = {
+            product_id : this.state.product_id,
+            final_price : this.state.final_price,
+            amount_paid : this.state.selected_payment,
+            user_id : window.sessionStorage.getItem('username'),
+            color : this.state.color_selected,
+            material : this.state.material_selected,
+            Address : 'default',
+            Mobile : 'default'
+        }
         axios.post('http://localhost:8000/order/create',{
             amount : this.state.selected_payment*100,
             product_id : this.state.product_id,
@@ -31,6 +42,7 @@ class Checkout extends PureComponent {
                 "hey": 'hello'
             }
         }).then((res)=>{
+            //console.log(res.data.id);
             var options = {
                 "key": "rzp_test_jIXgi5QQd9yr3s", // Enter the Key ID generated from the Dashboard
                 "amount": `${res.data.amount}`, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
@@ -40,14 +52,15 @@ class Checkout extends PureComponent {
                 //"image": "https://example.com/your_logo",
                 "order_id": `${res.data.id}`, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
                 "handler": function (response){
-                        console.log(response.razorpay_payment_id);
-                        console.log(response.razorpay_order_id);
-                        console.log(response.razorpay_signature);
+                        //console.log(response.razorpay_payment_id);
+                        //console.log(response.razorpay_order_id);
+                        //console.log(response.razorpay_signature);
                     axios.post('http://localhost:8000/order/verify',{
                         razorpay_payment_id : response.razorpay_payment_id,
                         order_id : res.data.id,
                         razorpay_signature : response.razorpay_signature,
-                        order_placed : response.razorpay_order_id
+                        order_placed : response.razorpay_order_id,
+                        order : order
                     }).then((resp)=>{
                         alert(resp.data);
                     })
